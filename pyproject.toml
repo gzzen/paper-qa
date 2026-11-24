@@ -41,6 +41,7 @@ dependencies = [
     "pybtex",
     "pydantic-settings",
     "pydantic~=2.0,>=2.10.1",  # Pin 2.10 for typing breaks
+    "python-dotenv",
     "rich",
     "setuptools",  # TODO: remove after release of https://bitbucket.org/pybtex-devs/pybtex/pull-requests/46/replace-pkg_resources-with-importlib
     "tantivy",
@@ -80,7 +81,6 @@ dev = [
     "pytest-timer[colorama]",
     "pytest-xdist",
     "pytest>=8",  # Pin to keep recent
-    "python-dotenv",
     "pyzotero>=1.11.0",  # Lower pin for typing fix on Zotero.dump in https://github.com/urschrei/pyzotero/issues/298
     "ty",
     "typeguard",

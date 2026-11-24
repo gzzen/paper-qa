@@ -251,6 +251,15 @@ Note version 5 requires Python 3.11+.
 pip install paper-qa>=5
 ```
 
+To configure API keys, copy the environment template and fill in the values:
+
+```bash
+cp .env.example .env
+```
+
+PaperQA automatically loads `.env` from the current directory or its parents.
+Variables already exported in your shell take precedence over values in `.env`.
+
 For development setup,
 please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file.
 

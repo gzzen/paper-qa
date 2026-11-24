@@ -1,3 +1,10 @@
+# ruff: noqa: E402
+from dotenv import find_dotenv, load_dotenv
+
+# Load runtime credentials and settings overrides before importing PaperQA modules
+# that read environment variables at import time.
+load_dotenv(find_dotenv(usecwd=True))
+
 from lmi import (
     EmbeddingModel,
     HybridEmbeddingModel,
