@@ -13,6 +13,10 @@ Sessionx.vim
 # Temporary
 .netrwhist
 *~
+
+# PaperQA and DSH local runtime state
+/.pqa/
+/.tmp/
 # Auto-generated tag files
 tags
 # Persistent undo

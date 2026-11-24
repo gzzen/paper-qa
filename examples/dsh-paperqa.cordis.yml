@@ -1,0 +1,22 @@
+# DSH 0.2.2-rc.5 overlay. Launch DSH from the paper-qa repository root.
+- insert:
+    - id: mcp-paperqa
+      name: "@deepseek-ai/dsh-mcp-client"
+      config:
+        serverName: paperqa
+        transport: stdio
+        command: uv
+        args:
+          - run
+          - --extra
+          - mcp
+          - paperqa-mcp
+        cwd: !!js process.cwd()
+        env:
+          DEEPSEEK_API_KEY: !!js process.env.DEEPSEEK_API_KEY
+          PAPERQA_SETTINGS: deepseek
+          PAPERQA_PAPER_DIRECTORY: !!js process.cwd() + '/data.mock'
+          PQA_HOME: !!js process.cwd()
+          TMPDIR: !!js process.cwd() + '/.tmp'
+        toolCallTimeoutMs: 600000
+        failOnStartupError: true

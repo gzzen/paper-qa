@@ -67,7 +67,7 @@ dev = [
     "httpx-aiohttp>=0.1.11",  # Pin for raw headers fix
     "ipykernel>=6.29",  # For running Jupter notebooks, and pin to keep recent
     "ipython>=8",  # Pin to keep recent
-    "paper-qa[docling,image,ldp,nemotron,pypdf-media,pymupdf,typing,zotero,local,qdrant,office]",
+    "paper-qa[docling,image,ldp,mcp,nemotron,pypdf-media,pymupdf,typing,zotero,local,qdrant,office]",
     "prek<0.2.15",  # Downpin for https://github.com/j178/prek/issues/1104
     "pydantic~=2.11",  # Pin for start of model_fields deprecation
     "pylint-per-file-ignores",
@@ -94,6 +94,7 @@ ldp = [
 local = [
     "sentence-transformers",
 ]
+mcp = ["mcp>=2.3,<3"]
 nemotron = ["paper-qa-nemotron"]
 office = [
     "unstructured[docx,xlsx,pptx]",
@@ -119,6 +120,7 @@ zotero = [
 ]
 
 [project.scripts]
+paperqa-mcp = "paperqa.mcp_server:main"
 pqa = "paperqa.agents:main"
 
 [project.urls]
